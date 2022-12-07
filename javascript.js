@@ -23,7 +23,25 @@ let playerSelection = getPlayerChoice().toLowerCase();
 console.log(playerSelection); //for debugging
 
 //compare the choices between the computer and the player
-
+function playRound(playerSelection, computerSelection) {
+    playerScore = 0;
+    computerScore = 0;
+    if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        return playerScore += 1;
+    } else if (playerSelection === 'rock' && computerSelection === 'paper') {
+        return computerScore += 1;
+    } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+        return computerScore += 1;
+    } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+        return playerScore += 1;
+    } else if (playerSelection === 'paper' && computerSelection === 'rock') {
+        return playerScore += 1;
+    } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+        return computerScore += 1;
+    } else if (playerSelection === computerSelection) {
+        return `It's a draw`;
+    }
+}
 
 
 //output result
