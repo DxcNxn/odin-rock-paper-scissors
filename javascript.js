@@ -67,3 +67,10 @@ function game() {
 game();
 
 //output final result
+if (playerScore > computerScore) {
+    console.log(`Congrats! You won!`);
+} else if (playerScore < computerScore) {
+    console.log(`You lost! Noob!`);
+} else {
+    console.log(`It's a tie. Try again!`);
+}
