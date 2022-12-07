@@ -11,7 +11,7 @@ function getComputerChoice() {
 }
 
 let computerSelection = getComputerChoice();
-console.log(computerSelection); //for debugging
+// console.log(computerSelection); //for debugging
 
 
 //get player choice
@@ -20,13 +20,16 @@ function getPlayerChoice() {
 }
 
 let playerSelection = getPlayerChoice().toLowerCase();
-console.log(playerSelection); //for debugging
+// console.log(playerSelection); //for debugging
+
+let playerScore = 0;
+let computerScore = 0;
 
 //compare the choices between the computer and the player
 function playRound(playerSelection, computerSelection) {
-    playerScore = 0;
-    computerScore = 0;
-    if (playerSelection === 'rock' && computerSelection === 'scissors') {
+    if (playerSelection === computerSelection) {
+        return playerScore += 0;
+    } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         return playerScore += 1;
     } else if (playerSelection === 'rock' && computerSelection === 'paper') {
         return computerScore += 1;
@@ -38,10 +41,13 @@ function playRound(playerSelection, computerSelection) {
         return playerScore += 1;
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
         return computerScore += 1;
-    } else if (playerSelection === computerSelection) {
-        return `It's a draw`;
     }
 }
+
+playRound(playerSelection, computerSelection);
+
+// console.log(playerScore); //for debugging
+// console.log(computerScore); //for debugging
 
 
 //output result
