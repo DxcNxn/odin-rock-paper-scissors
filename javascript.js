@@ -15,7 +15,11 @@ let computerSelection = getComputerChoice();
 
 
 //get player choice
+function getPlayerChoice() {
+    return playerChoice = prompt(`Enter rock, paper, or scissors: `);
+}
 
+let playerSelection = getPlayerChoice().toLowerCase();
 
 //set game rules
 'rock' > 'scissors';
