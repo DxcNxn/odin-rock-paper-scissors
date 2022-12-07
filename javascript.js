@@ -11,7 +11,7 @@ function getComputerChoice() {
 }
 
 let computerSelection = getComputerChoice();
-// console.log(computerSelection); //for debugging
+console.log(computerSelection); //for debugging
 
 
 //get player choice
@@ -20,20 +20,10 @@ function getPlayerChoice() {
 }
 
 let playerSelection = getPlayerChoice().toLowerCase();
-
-//set game rules
-'rock' > 'scissors';
-'scissors' > 'paper';
-'paper' > 'rock';
+console.log(playerSelection); //for debugging
 
 //compare the choices between the computer and the player
-if (computerSelection > playerSelection) {
-    console.log( `You lose! ${computerSelection} beats ${playerSelection}` );
-} else if (computerSelection < playerSelection) {
-    console.log( `You win! ${playerSelection} beats ${computerSelection}` );
-} else {
-    console.log( `It's a draw` );
-};
+
 
 
 //output result
