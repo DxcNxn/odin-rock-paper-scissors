@@ -10,15 +10,26 @@ function getComputerChoice() {
     return computerChoice = choices[pickNum];
 }
 
-console.log(getComputerChoice());
+let computerSelection = getComputerChoice();
+// console.log(computerSelection); //for debugging
 
 
 //get player choice
 
 
+//set game rules
+'rock' > 'scissors';
+'scissors' > 'paper';
+'paper' > 'rock';
 
 //compare the choices between the computer and the player
-
+if (computerSelection > playerSelection) {
+    console.log( `You lose! ${computerSelection} beats ${playerSelection}` );
+} else if (computerSelection < playerSelection) {
+    console.log( `You win! ${playerSelection} beats ${computerSelection}` );
+} else {
+    console.log( `It's a draw` );
+};
 
 
 //output result
