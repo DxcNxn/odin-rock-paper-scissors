@@ -1,27 +1,6 @@
 //rock-paper-scissors game
 
 const choices = ['rock', 'paper', 'scissors'];
-
-//get computer choice
-function getComputerChoice() {
-    //generate a random number within the length of choices array
-    let pickNum = Math.floor(Math.random() * choices.length);
-    //use generated number above to pull a property from choices array
-    return computerChoice = choices[pickNum];
-}
-
-let computerSelection = getComputerChoice();
-// console.log(computerSelection); //for debugging
-
-
-//get player choice
-function getPlayerChoice() {
-    return playerChoice = prompt(`Enter rock, paper, or scissors: `);
-}
-
-let playerSelection = getPlayerChoice().toLowerCase();
-// console.log(playerSelection); //for debugging
-
 let playerScore = 0;
 let computerScore = 0;
 
@@ -44,34 +23,47 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-playRound(playerSelection, computerSelection);
+//playRound(playerSelection, computerSelection); //for debugging
 
+//output result
 // console.log(playerScore); //for debugging
 // console.log(computerScore); //for debugging
 
-
-//output result
-
-
-
-//end round
-
-
-
-//update score
-
-
-
-//start next round
-
-
-
 //play 5 rounds in total
+function game() {
+    for (let i = 1; i <= 5; i++) {     
+        
+        //get computer choice
+        function getComputerChoice() {
+        
+            //generate a random number within the length of choices array
+            let pickNum = Math.floor(Math.random() * choices.length);
+            
+            //use generated number above to pull a property from choices array
+            return computerChoice = choices[pickNum];
+        }
 
+        let computerSelection = getComputerChoice();
+        // console.log(computerSelection); //for debugging
 
+        //get player choice
+        function getPlayerChoice() {
+            
+            //user input
+            return playerChoice = prompt(`Enter rock, paper, or scissors: `);
+        }
 
-//get final scores
+        let playerSelection = getPlayerChoice().toLowerCase();
+        // console.log(playerSelection); //for debugging
+        
+        playRound(playerSelection, computerSelection);
+        //output scores each round
+        console.log(`Round ${i}:`);
+        console.log(`Your score is ${playerScore}.`);
+        console.log(`Computer score is ${computerScore}.`);
+    }
+}
 
-
+game();
 
 //output final result
