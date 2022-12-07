@@ -1,7 +1,16 @@
 //rock-paper-scissors game
 
-//get computer choice
+const choices = ['rock', 'paper', 'scissors'];
 
+//get computer choice
+function getComputerChoice() {
+    //generate a random number within the length of choices array
+    let pickNum = Math.floor(Math.random() * choices.length);
+    //use generated number above to pull a property from choices array
+    return computerChoice = choices[pickNum];
+}
+
+console.log(getComputerChoice());
 
 
 //get player choice
