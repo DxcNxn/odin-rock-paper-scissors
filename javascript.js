@@ -59,8 +59,8 @@ function game() {
         playRound(playerSelection, computerSelection);
         //output scores each round
         console.log(`Round ${i}:`);
-        console.log(`Your score is ${playerScore}.`);
-        console.log(`Computer score is ${computerScore}.`);
+        console.log(`You played ${playerSelection}. Your score is ${playerScore}.`);
+        console.log(`Computer played ${computerSelection}. Computer score is ${computerScore}.`);
     }
 }
 
