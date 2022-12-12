@@ -40,7 +40,7 @@ function testString(string) {
     let rockSpelling = /^r\w*|\w*([^sci])o\w*|\w*([^rok])c\2\w*|\w*k$/gi;
 
     //regex to fix any misspelling similar to 'paper'
-    let paperSpelling = /^p\w*|\wa\w*|\w+p\w*|\w*e\w|\w*r$/gi;
+    let paperSpelling = /^p\w*|\w([^aecios])a\w*|\w*p\w*|\w*([^aecios])e\w|\1r$/gi;
     
     //regex to fix any misspelling similar to 'scissors'
     let scissorsSpelling = /^s\w+|\w([^rok])c\1\w*|\w*i\w*|\w*s\w*|\w*([^rck])o\2\w*|\w*([^ock])r\3\w*/gi;
@@ -53,6 +53,7 @@ function testString(string) {
     } else if (string.match(scissorsSpelling)) {
         string = string.replace(scissorsSpelling, 'scissors');
     } else {
+        console.log(`Input invalid. Your input has been defaulted to 'rock'.`);
         string = 'rock'; //default to 'rock' if all failed
     };
 
